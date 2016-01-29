@@ -1,0 +1,33 @@
+html {
+  font-family: $roboto-mono;
+}
+
+.border {
+  border: 1px solid $lemon;
+  background-color: $lemon;
+  p {
+      color: $salmon;
+  }
+  @media only screen and (min-width: 30em){
+      border-color: $indigo;
+      background-color: $salmon;
+        p {
+          color: $lemon;
+        }
+  }
+}
+
+.primary-btn {
+  @include button($salmon);
+}
+
+.secondary-btn {
+  @include button($lemon);
+  color: $indigo;
+}
+
+ul{
+  li {
+    @extend .primary-btn;
+  }
+}
